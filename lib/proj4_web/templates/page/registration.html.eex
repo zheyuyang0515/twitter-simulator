@@ -1,0 +1,16 @@
+username: <input id="register_username" type="text" class="form-control" placeholder="Username"></input><br>
+password: <input id="register_password" type="password" class="form-control" placeholder="Password"></input>
+<input type="checkbox" id="show_password" onclick = "check_show_password()">Show password</input><br><br>
+<script>
+    function check_show_password() {
+    var show_password= document.getElementById("show_password");
+    var register_password = document.getElementById("register_password");
+    if(show_password.checked){
+       register_password.type = "text";
+    } else{
+        register_password.type = "password";
+    }
+}
+</script>
+<button id="registration" class="btn btn-success">Register Now!</button>
+<button id="back" class="btn btn-danger" style="float: right;" onclick="goUrl()"/><script type="text/javascript">function goUrl() {        location.href = "/";    }</script>Back</button>

@@ -1,0 +1,91 @@
+<div id = "login_page">
+username: <input id="username" type="text" class="form-control" placeholder="Username"></input><br>
+password: <input id="password" type="password" class="form-control" placeholder="Password"></input>
+<input type="checkbox" id="show_password" onclick = "check_show_password()">Show password</input><br><br>
+<button id="login" class="btn btn-primary">Login!</button><br>
+<a href="/registration" style="text-decoration:underline;">Create Account</a>
+</div>
+<div id = "main_page" style="display: none;">
+<div class="row">
+<div class="col-xs-1">
+Welcome,  
+</div>
+<div class="col-xs-1">
+    <p id="main_page_username">aaa</p>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <input type="text" id="mentioned" class="form-control" placeholder="@Mentioned">
+  </div>
+  <div class="col-xs-6">
+    <input type="text" id="hashtags" class="form-control" placeholder="#HashTags">
+  </div>
+</div><br>
+<script type="text/javascript">
+function check_btn_disabled(x, btnId)
+    {
+        var btn=document.getElementById(btnId)
+        var y=document.getElementById(x).value
+        if(y == "") {
+            btn.disabled = true; 
+        }
+        if(y.length > 0) {
+            btn.disabled = false; 
+        }
+    }
+</script>
+
+<div>
+    <input type="text" id="tweet_content" class="form-control" placeholder="Tweet" autofocus onkeyup="check_btn_disabled(this.id, &quot;send_tweet&quot;)">
+</div><br>
+<div>
+    <button id="send_tweet" class="btn btn-success" disabled="true">Send Tweet!</button>
+    <button id="logout" class="btn btn-danger" style="float: right;">Logout</button>
+</div><br>
+<hr>
+<div>
+    <button id="search_mentioned" class="btn btn-primary">Search Mentioned</button>
+</div><br>
+<div>
+    <button id="search_subscribed" class="btn btn-primary">Search Subscribed</button>
+</div><br>
+<div class = "row">
+    <div class="col-xs-3">
+        <input type="text" id="subscribe_input" class="form-control" placeholder="Username" onkeyup="check_btn_disabled(this.id, &quot;subscribe&quot;)">
+    </div>
+    <div class="col-xs-3">
+        <button id="subscribe" class="btn btn-primary" disabled="true" >Subscribe</button>
+    </div>
+</div><br>
+<div class = "row">   
+    <div class="col-xs-3">
+        <input type="text" id="search_hashtag_input" class="form-control" placeholder="#HashTag" onkeyup="check_btn_disabled(this.id, &quot;search_hashtag&quot;)">
+    </div>
+    <div class="col-xs-3">
+        <button id="search_hashtag" class="btn btn-primary" disabled="true">Search HashTag</button>
+    </div>
+    <div>
+        <button id="delete_account" class="btn btn-danger" style="float: right;">Delete Account</button>
+    </div>
+</div>
+<hr>
+<button id="clear_screen" class="btn btn-primary" style="float: right;" onclick = "clear_messages()">Clear</button>
+<div id="messages"></div>
+</div>
+
+<script>
+    function clear_messages() {
+        var messages= document.getElementById("messages");
+        messages.innerHTML="";
+    }
+    function check_show_password() {
+        var show_password= document.getElementById("show_password");
+        var register_password = document.getElementById("password");
+        if(show_password.checked){
+        register_password.type = "text";
+        } else{
+            register_password.type = "password";
+        }
+    }
+</script>
