@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿# COP5615 - Dist Oper Sys Princ - Fall 2019 - Project4.2
+Twitter-Simulator
 ---
 ## Step to run the code
 ---
