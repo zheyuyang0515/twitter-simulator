@@ -3,7 +3,7 @@ Twitter-Simulator
 ## Step to run the code
 ---
 ```
- cd proj4
+ cd twitter-simulator/
  mix phx.server
 ```
 After start the server, open a browser and enter URL 'localhost:4000' to access to our front-end webpage.
