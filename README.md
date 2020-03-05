@@ -34,7 +34,7 @@ A user could search tweets which he subscribed.
 ### 11. Tweets Automatic Delivery:
 If a user is connected, he could receive subscribed tweets or tweets which mentioned him live.
 ### 12. 10000 users simulation: 
-When the server started, 100 users will be created by the simulator, these simulated user will do action randomly and based on the Zipf distribution. User who access to our front-end could subscribe these 100 simulated users and search and receive their tweets.
+When the server started, 10000 users will be created by the simulator, these simulated user will do action randomly and based on the Zipf distribution. User who access to our front-end could subscribe these 100 simulated users and search and receive their tweets.
 
  
 
